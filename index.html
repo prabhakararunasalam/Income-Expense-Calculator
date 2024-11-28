@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>budgetTracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1 class="heading">Income Expense Calculator</h1>
+        <!-- totalAmount showing part -->
+        <div class="transaction">
+          <div class="totalAmount">
+            Total Income: &#x20B9; <span id="income">0</span>
+          </div>
+          <div class="totalAmount">
+            Total Expanse: &#x20B9; <span id="Expense">0</span>
+          </div>
+          <div class="totalAmount">
+            Net balance: &#x20B9; <span id="Net">0</span>
+          </div>
+        </div>
+      </header>
+      <!-- radio button filters -->
+      <div class="filters">
+        <label>
+          <input type="radio" name="filter" value="all" checked /> All</label
+        >
+        <label
+          ><input type="radio" name="filter" value="income" /> Income</label
+        >
+
+        <label
+          ><input type="radio" name="filter" value="expense" /> Expense</label
+        >
+      </div>
+      <!-- adding entries -->
+      <div class="form">
+        <select id="type" class="input-field">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <input
+          type="text"
+          id="description"
+          class="input-field"
+          placeholder="Description"
+        />
+        <input
+        value="0"
+          type="number"
+          id="amount"
+          class="input-field"
+          placeholder="Amount"
+        />
+        <button id="add-btn" class="add-button">Add</button>
+      </div>
+      <!--entry list -->
+      <table id="table">
+        <tr>
+          <th>#</th>
+          <th>Description</th>
+          <th>Amount</th>
+          <th>Type</th>
+          <th>Delete</th>
+          <th>Edit</th>
+        </tr>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
